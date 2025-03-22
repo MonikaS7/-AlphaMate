@@ -1,0 +1,184 @@
+/* welcome.css */
+
+:root {
+    --primary-color: #8B8BFF;
+    --text-color: #FFFFFF;
+    --button-color: #FFFFFF;
+    --button-text: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: var(--primary-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+}
+
+.container {
+    width: 100%;
+    max-width: 430px;
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.logo-icon {
+    height: 32px;
+    width: auto;
+}
+
+.welcome-content {
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.username {
+    color: #FFE5B4;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.subtitle {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    opacity: 0.8;
+    max-width: 100%;
+    white-space: normal;
+}
+
+.illustration {
+    width: 100%;
+    max-width: 300px;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.illustration img {
+    width: 100%;
+    height: auto;
+}
+
+.get-started-btn {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 100px;
+    border: none;
+    background-color: var(--button-color);
+    color: var(--button-text);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    margin-top: auto;
+}
+
+.get-started-btn:hover {
+    transform: scale(1.02);
+    background-color: #F5F5F5;
+}
+
+.get-started-btn:active {
+    transform: scale(0.98);
+}
+
+.home-indicator {
+    width: 134px;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 100px;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Animation for illustration */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.illustration img {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Media Queries */
+@media (max-height: 700px) {
+    .welcome-container {
+        padding: 32px 24px;
+    }
+
+    .logo {
+        margin-bottom: 32px;
+    }
+
+    .welcome-content h1 {
+        font-size: 36px;
+    }
+
+    .welcome-content h2 {
+        font-size: 28px;
+    }
+
+    .welcome-content p {
+        font-size: 16px;
+    }
+
+    .illustration {
+        margin: 24px 0;
+    }
+
+    .meditation-img {
+        width: 240px;
+    }
+}
+
+@media (min-height: 800px) {
+    .welcome-container {
+        justify-content: center;
+    }
+}
